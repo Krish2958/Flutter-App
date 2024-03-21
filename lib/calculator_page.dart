@@ -74,8 +74,6 @@ class _CalculatorPageState extends State<CalculatorPage> {
     setState(() {
       _outputHistory = _input;
       try {
-        // Replace the '*' operator with '·' (unicode for multiplication sign)
-        _input = _input.replaceAll('*', '·');
         Parser p = Parser();
         Expression exp = p.parse(_input);
         ContextModel cm = ContextModel();
